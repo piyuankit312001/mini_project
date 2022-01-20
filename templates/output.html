@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Output</title>
+  <!-- google-fonts -->
+  
+ <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}"> -->
+<!-- font awesome -->
+<!-- bootstrap stylesheet -->
+<style>
+  .center {
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.9rem;
+    font-weight: 400;
+    margin-top: 140px;
+    margin-left: 70px;
+  }
+  .price {
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 0;
+    margin-top: 100px;
+    margin-left: 70px;
+  }
+  body
+  {
+    background-image: url(https://www.linkpicture.com/q/backgrd.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  } 
+  </style>
+  
+</head>
+<body> 
+     
+     <div class="center">
+       <p><b>{{output}} Km/L. </b></p>
+     </div>
+     <div class="price">
+       <p><b><span>&#8377;</span> {{price}} per liter.</b></p>
+     </div>
+</body>
+</html>

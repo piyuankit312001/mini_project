@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+.center {
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-top: 550px;
+    margin-left: 250px;
+  }
+  .price {
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-top: 350px;
+    margin-left: 250px;
+  }
+  body
+  {
+    background-image: url(https://i.ibb.co/FDykVLx/Background-1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  } 

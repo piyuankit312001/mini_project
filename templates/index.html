@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuel Consumption Prediction</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div class = "container">
+        <h1 class = "text-center">Fuel Consumption Predictor</h1>
+        <form action="{{ url_for('predict') }}" method="post" id="form1">
+					<div class= "form-group">
+						<label id = "price_id">Price</label>
+    	    		<input 
+										 type="number" 
+										 name="price"
+										 class="form-control"
+										 placeholder="Price in INR" 
+										 min = 0
+										 required 
+							/>
+          </div>
+					<div class= "form-group">
+						<label id = "eng_power">Engine Power</label>
+            <input 
+									 type="number" 
+									 name="eng"
+									 class="form-control"
+									 placeholder="Engine in cc"
+									 min = 50
+							 		 max = 2000
+									
+									 required
+							/>
+          </div>
+					<div class= "form-group">
+						<label id = "age_inyear">Age of vehicle</label>
+            <input 
+									 type="number" 
+									 name="age" 
+									 class="form-control"
+									 placeholder="Enter age of vehicle (in years)" 
+									 min = 0
+									 max = 50
+									 required
+						/>
+					</div>
+					<div class= "form-group">
+						<label id = "tot_km">Kilometers Driven</label>
+            <input 
+									 type="number" 
+									 name="km" 
+									 class="form-control"
+									 placeholder="Total Driven in KM" 
+									 min = 0
+									 max = 9999999
+									 required
+									 />
+					</div>
+          <div class="form-group">
+						<p>Select the type of vehicle </p>
+            <label id="typeoc">
+							<input
+										 name="typeof"
+										 value = 1
+										 type = "radio"
+										 class="input-radio"
+										 checked
+							/>Manual</label
+						>
+						<label id="typeoc">
+							<input
+										 name="typeof"
+										 value = 0
+										 type = "radio"
+										 class="input-radio"
+							/>Automatic</label
+						>   
+         	</div>
+          <div class="form-group">
+						<p>Select the type of fuel</p>
+                <label id="typeof">
+									<input
+												 name="fuel"
+												 value='p'
+												 type="radio"
+												 class="input-radio"
+												 checked
+									/>Petrol</label
+								>
+								<label id="typeof">
+											<input
+														 name="fuel"
+														 value='d'
+														 type="radio"
+														 class="input-radio"
+											/>Diesel</label
+										>
+								<label id="typeof">
+											<input
+														 name="fuel"
+														 value='g'
+														 type="radio"
+														 class="input-radio"
+											/>Gas</label
+										>
+            </div>
+					<div class="form-group">
+            <button type="submit" id="submit"
+										class="submit-button">Predict</button
+						>
+					</div>
+        </form>
+
+    </div>
+</body>
+</html>
